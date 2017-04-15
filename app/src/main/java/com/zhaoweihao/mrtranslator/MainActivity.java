@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
                     String word = editText.getText().toString();
 
-                    String url = "http://fanyi.youdao.com/openapi.do?keyfrom=mrtranslator&key=769146239&type=data&doctype=json&version=1.1&q=";
+                    String url = "http://fanyi.youdao.com/openapi.do?keyfrom=yourkeyfrom&key=yourkey&type=data&doctype=json&version=1.1&q=";
 
                     HttpUtil.sendOkHttpRequest(url + word, new okhttp3.Callback() {
                         @Override
