@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">翻译君</string>
+    <string name="translate_btn">翻译</string>
+    <string name="clean_text">清除文本</string>
+    <string name="translate_title">译文</string>
+    <string name="explains_title">详细译义</string>
+    <string name="web_title">短语</string>
+    <string name="copy_success">复制成功</string>
+    <string name="share_choice">请选择要分享的应用</string>
+    <string name="input_text">在此输入要翻译的文本...</string>
+    <string name="input_empty">输入的文本为空</string>
+    <string name="translate_fail">连接超时</string>
+    <string name="translate_overlong">要翻译的文本过长</string>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MrTranslator</string>
+    <string name="translate_btn">Translate</string>
+    <string name="clean_text">Clean text</string>
+    <string name="translate_title">Translation</string>
+    <string name="explains_title">Explains</string>
+    <string name="web_title">Web</string>
+    <string name="copy_success">Copy successfully</string>
+    <string name="share_choice">Choose the app you want to share</string>
+    <string name="input_text">Input the words you want to translate here</string>
+    <string name="input_empty">Empty input</string>
+    <string name="translate_fail">Connect overtime</string>
+    <string name="translate_overlong">Translate overlong</string>
+</resources>
