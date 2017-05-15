@@ -4,6 +4,8 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +25,7 @@ import android.widget.Toast;
 
 import com.zhaoweihao.mrtranslator.Util.HttpUtil;
 import com.zhaoweihao.mrtranslator.Util.Utility;
+import com.zhaoweihao.mrtranslator.constant.Constant;
 import com.zhaoweihao.mrtranslator.gson.Translate;
 
 import java.io.IOException;
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editText;
 
-    private Button button;
+    private FloatingActionButton button;
 
 //    private TextView dataShown;
 
@@ -54,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressBar progressBar;
 
-    private TextView clearText;
+    private ImageView clearView;
 
     private ImageView copyImage;
 
@@ -66,10 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView webTitle;
 
+    private LinearLayout mixLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.app_bar_main);
+        setContentView(R.layout.content_main);
 
         toolbar= (Toolbar) findViewById(R.id.toolbar);
 
@@ -77,7 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
         editText= (EditText)findViewById(R.id.word_input);
 
-        button= (Button)findViewById(R.id.translate_btn);
+        button= (FloatingActionButton)findViewById(R.id.translate_btn);
+
+        button.setVisibility(View.INVISIBLE);
 
 //        dataShown= (TextView)findViewById(R.id.data_shown);
 
@@ -95,9 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
         progressBar= (ProgressBar) findViewById(R.id.progress_bar);
 
-        clearText= (TextView) findViewById(R.id.tv_clear);
+        clearView= (ImageView) findViewById(R.id.iv_clear);
 
-        clearText.setVisibility(View.INVISIBLE);
+        clearView.setVisibility(View.INVISIBLE);
 
         copyImage= (ImageView) findViewById(R.id.copy);
 
@@ -113,8 +120,12 @@ public class MainActivity extends AppCompatActivity {
 
         webTitle= (TextView) findViewById(R.id.web_title);
 
+        mixLayout= (LinearLayout) findViewById(R.id.mixLayout);
 
-        clearText.setOnClickListener(new View.OnClickListener() {
+        mixLayout.setVisibility(View.INVISIBLE);
+
+
+        clearView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editText.setText("");
@@ -132,9 +143,11 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 if (editText.getEditableText().toString().length() != 0){
-                    clearText.setVisibility(View.VISIBLE);
+                    clearView.setVisibility(View.VISIBLE);
+                    button.setVisibility(View.VISIBLE);
                 } else {
-                    clearText.setVisibility(View.INVISIBLE);
+                    clearView.setVisibility(View.INVISIBLE);
+                    button.setVisibility(View.INVISIBLE);
                 }
 
 
@@ -166,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
                     String word = editText.getText().toString();
 
-                    String url = "http://fanyi.youdao.com/openapi.do?keyfrom=yourkeyfrom&key=yourkey&type=data&doctype=json&version=1.1&q=";
+                    String url = Constant.YOUDAO_URL;
 
                     HttpUtil.sendOkHttpRequest(url + word, new okhttp3.Callback() {
                         @Override
@@ -263,6 +276,8 @@ public class MainActivity extends AppCompatActivity {
             View view= LayoutInflater.from(this).inflate(R.layout.translation_item,translationLayout,false);
             TextView translateText= (TextView) view.findViewById(R.id.translation_text);
             translateText.setText(translate.getTranslation()[i]);
+            translateText.setTextColor(getResources().getColor(R.color.white));
+            translateText.setTextSize(25);
             translationLayout.addView(view);
         }
 
@@ -330,6 +345,8 @@ public class MainActivity extends AppCompatActivity {
         copyImage.setVisibility(View.VISIBLE);
 
         shareImage.setVisibility(View.VISIBLE);
+
+        mixLayout.setVisibility(View.VISIBLE);
 
 
 
