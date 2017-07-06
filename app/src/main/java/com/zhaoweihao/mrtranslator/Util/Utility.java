@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.zhaoweihao.mrtranslator.gson.Translate;
 
 /**
- * Created by Administrator on 2017/4/13.
+ * Created by Zhaoweihao on 2017/4/13.
  */
 
 public class Utility {

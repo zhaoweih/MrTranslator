@@ -69,5 +69,14 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="18dp"
         />
+    <ImageView
+        android:id="@+id/collect_done"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_star_white_24dp"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="18dp"
+        />
 
 </android.support.v7.widget.CardView>

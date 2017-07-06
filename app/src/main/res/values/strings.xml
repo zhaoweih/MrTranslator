@@ -11,4 +11,9 @@
     <string name="input_empty">输入的文本为空</string>
     <string name="translate_fail">连接超时</string>
     <string name="translate_overlong">要翻译的文本过长</string>
+    <string name="nav_collect">翻译收藏夹</string>
+    <string name="nav_about">关于</string>
+    <string name="collect_success">收藏成功</string>
+    <string name="collection">翻译收藏夹</string>
+    <string name="deletesuccess">取消成功</string>
 </resources>

@@ -5,14 +5,20 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -23,10 +29,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.zhaoweihao.mrtranslator.Data.Collect;
 import com.zhaoweihao.mrtranslator.Util.HttpUtil;
 import com.zhaoweihao.mrtranslator.Util.Utility;
 import com.zhaoweihao.mrtranslator.constant.Constant;
 import com.zhaoweihao.mrtranslator.gson.Translate;
+
+import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
 
@@ -70,6 +79,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView webTitle;
 
     private LinearLayout mixLayout;
+
+    private DrawerLayout mDrawerLayout;
+
+    private NavigationView navigationView;
+
+    private ImageView collectImage;
+
+    private ImageView collectDoneImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +140,44 @@ public class MainActivity extends AppCompatActivity {
         mixLayout= (LinearLayout) findViewById(R.id.mixLayout);
 
         mixLayout.setVisibility(View.INVISIBLE);
+
+        mDrawerLayout= (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        navigationView= (NavigationView) findViewById(R.id.nav_view);
+
+        collectImage= (ImageView) findViewById(R.id.collect);
+
+        collectImage.setVisibility(View.INVISIBLE);
+
+        collectDoneImage= (ImageView) findViewById(R.id.collect_done);
+
+        collectDoneImage.setVisibility(View.INVISIBLE);
+
+        ActionBar actionBar=getSupportActionBar();
+
+        if(actionBar!=null){
+
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
+        }
+
+        navigationView.setCheckedItem(R.id.nav_collect);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.nav_collect:
+                        Intent intent=new Intent(MainActivity.this,CollectionActivity.class);
+                        startActivity(intent);
+
+
+                }
+                mDrawerLayout.closeDrawers();
+                return true;
+            }
+        });
+
+
 
 
         clearView.setOnClickListener(new View.OnClickListener() {
@@ -228,7 +283,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    private void showResponseData(final String response){
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                break;
+
+            default:
+
+        }
+        return true;
+    }
+
+    //    private void showResponseData(final String response){
 //        runOnUiThread(new Runnable() {
 //            @Override
 //            public void run() {
@@ -342,11 +410,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        collectImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Collect collect=new Collect();
+                collect.setChinese(translate.getTranslation()[0]);
+                collect.setEnglish(translate.getQuery());
+                collect.save();
+                Toast.makeText(MainActivity.this, R.string.collect_success, Toast.LENGTH_SHORT).show();
+                collectDoneImage.setVisibility(View.VISIBLE);
+                collectImage.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        collectDoneImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DataSupport.deleteAll(Collect.class,"english=?",translate.getQuery());
+                Toast.makeText(MainActivity.this, R.string.deletesuccess, Toast.LENGTH_SHORT).show();
+                collectDoneImage.setVisibility(View.INVISIBLE);
+                collectImage.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+
         copyImage.setVisibility(View.VISIBLE);
 
         shareImage.setVisibility(View.VISIBLE);
 
         mixLayout.setVisibility(View.VISIBLE);
+
+        collectImage.setVisibility(View.VISIBLE);
 
 
 

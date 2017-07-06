@@ -1,7 +1,7 @@
 package com.zhaoweihao.mrtranslator.gson;
 
 /**
- * Created by Administrator on 2017/4/13.
+ * Created by Zhaoweihao on 2017/4/13.
  */
 
 public class Basic {
