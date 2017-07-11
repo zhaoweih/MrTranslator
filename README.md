@@ -1,4 +1,4 @@
-# Application name:MrTranslator
+﻿# Application name:MrTranslator
 # Chinese name:翻译君
 
 本应用使用有道翻译API完成
@@ -10,18 +10,12 @@
 - step1
 
 ​       使用前请在Constant.java中替换自己的keyfrom和key
-
-​       (Constant.java路径在MrTranslator/app/src/main/java/com/zhaoweihao/mrtranslator/constant.java)
-
 ​       (由于有道api升级，所以没有keyfrom和key的可以不替换)
-
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/20170706.png)   
 
 -  step2
 
   将手机连接电脑，开启开发者模式，运行在你的手机里
 
-  ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/20170706_2.png)   
 
 ### 更新信息:
 
@@ -40,8 +34,6 @@
 一名普通的大二学生，热衷开源和接触新事物
 
 android是我课余自学的项目
-
-现在本小公主用起了mac os，yes！！！
 
 
 
