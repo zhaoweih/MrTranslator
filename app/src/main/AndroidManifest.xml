@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".MainActivity"
+        <activity android:name=".Activity.MainActivity"
             android:screenOrientation="portrait"
             >
             <intent-filter>
@@ -21,8 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CollectionActivity"
+        <activity android:name=".Activity.CollectionActivity"
             android:label="@string/collection"
+            />
+        <activity android:name=".Activity.AboutActivity"
+            android:label="@string/about"
             />
     </application>
 

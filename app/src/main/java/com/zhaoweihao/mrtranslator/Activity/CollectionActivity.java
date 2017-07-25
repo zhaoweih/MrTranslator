@@ -1,21 +1,23 @@
-package com.zhaoweihao.mrtranslator;
+package com.zhaoweihao.mrtranslator.Activity;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.zhaoweihao.mrtranslator.Adapter.CollectionAdapter;
 import com.zhaoweihao.mrtranslator.Data.Collect;
+import com.zhaoweihao.mrtranslator.Other.MyItemDecoration;
+import com.zhaoweihao.mrtranslator.R;
 
 import org.litepal.crud.DataSupport;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -30,19 +32,11 @@ public class CollectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collection);
         toolbar= (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
-        List<Collect> collects= DataSupport.findAll(Collect.class);
-        recyclerView= (RecyclerView) findViewById(R.id.recycler_view);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
 
-        recyclerView.setLayoutManager(linearLayoutManager);
-        CollectionAdapter collectionAdapter=new CollectionAdapter(collects);
-        recyclerView.addItemDecoration(new MyItemDecoration());
-        recyclerView.setAdapter(collectionAdapter);
+        refresh();
 
         ActionBar actionBar=getSupportActionBar();
-
         if(actionBar!=null){
 
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -57,6 +51,10 @@ public class CollectionActivity extends AppCompatActivity {
             case android.R.id.home:
                 finish();
                 break;
+            case R.id.refresh:
+                refresh();
+                Toast.makeText(this, R.string.refresh_success, Toast.LENGTH_SHORT).show();
+                break;
 
             default:
 
@@ -64,5 +62,24 @@ public class CollectionActivity extends AppCompatActivity {
         return true;
     }
 
+    private void refresh(){
+
+        List<Collect> collects= DataSupport.findAll(Collect.class);
+        recyclerView= (RecyclerView) findViewById(R.id.recycler_view);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+
+        recyclerView.setLayoutManager(linearLayoutManager);
+        CollectionAdapter collectionAdapter=new CollectionAdapter(this,collects);
+        recyclerView.addItemDecoration(new MyItemDecoration());
+        recyclerView.setAdapter(collectionAdapter);
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar,menu);
+        return true;
+    }
 
 }

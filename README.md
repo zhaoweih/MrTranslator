@@ -1,43 +1,55 @@
-﻿# Application name:MrTranslator
-# Chinese name:翻译君
 
-本应用使用有道翻译API完成
+# 应用中文名:翻译君
+## Application name:MrTranslator
 
-有道API申请地址：http://fanyi.youdao.com/openapi
+### 描述
 
-**使用步骤**
+本应用使用#有道翻译API完成
 
-- step1
+#有道API申请地址：http://fanyi.youdao.com/openapi
 
-​       使用前请在Constant.java中替换自己的keyfrom和key
-​       (由于有道api升级，所以没有keyfrom和key的可以不替换)
-
--  step2
-
-  将手机连接电脑，开启开发者模式，运行在你的手机里
+功能：中英互译
 
 
-### 更新信息:
+
+
+
+### 截图
+![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/one.jpg)
+![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/two.jpg)
+![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/three.jpg)
+
+
+
+### 如何找我
+
+
+邮箱：zhaoweihaochn#foxmail.com
+
+
+### 更新信息
+
+- 2017.7.26 收藏功能完善，增加关于页面，完成
+
 
 - 2017.7.06 增加navigationview，增加收藏页面，收藏按钮现在可用，还没完成
 
 
 - 2017.5.15 更新UI界面，还没完成，基础功能可以使用
 
-## 截图:<br>
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/1.png)
+### 版权信息
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/icon-monk" title="Icon Monk">Icon Monk</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+Material Design icons by [Google](https://github.com/google/material-design-icons)
 
 
 
-### 关于我
+### 使用协议
 
-一名普通的大二学生，热衷开源和接触新事物
+本应用只供学习研究，请勿用于商业用途
 
-android是我课余自学的项目
-
-
-
-### 使用协议(free for personal use only)
+### License
 
 
       Copyright 2017 Zhao Weihao

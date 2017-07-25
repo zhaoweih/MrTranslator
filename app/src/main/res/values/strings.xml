@@ -16,4 +16,10 @@
     <string name="collect_success">收藏成功</string>
     <string name="collection">翻译收藏夹</string>
     <string name="deletesuccess">取消成功</string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="cancel_success">取消成功</string>
+    <string name="about">关于</string>
+    <string name="about_text_chn">上面这个是反战标志，希望借这应用向世界人民倡导和平，幸好的是我们生活在一个和平的国家，愿世界人民都可以和平安康</string>
+    <string name="about_text_eng">The above is an anti-war symbol, hoping to use this application to tell people of the world to promote peace, it\'s fortunately we live in a peaceful country, i wish all people of the world can live a peaceful life</string>
+    <string name="web">zhaoweihao.me</string>
 </resources>

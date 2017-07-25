@@ -1,10 +1,9 @@
-package com.zhaoweihao.mrtranslator;
+package com.zhaoweihao.mrtranslator.Activity;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -21,7 +20,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,6 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zhaoweihao.mrtranslator.Data.Collect;
+import com.zhaoweihao.mrtranslator.R;
 import com.zhaoweihao.mrtranslator.Util.HttpUtil;
 import com.zhaoweihao.mrtranslator.Util.Utility;
 import com.zhaoweihao.mrtranslator.constant.Constant;
@@ -87,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView collectImage;
 
     private ImageView collectDoneImage;
+
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -167,8 +168,14 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_collect:
-                        Intent intent=new Intent(MainActivity.this,CollectionActivity.class);
+                        intent=new Intent(MainActivity.this,CollectionActivity.class);
                         startActivity(intent);
+                        break;
+                    case R.id.nav_about:
+                        intent=new Intent(MainActivity.this,AboutActivity.class);
+                        startActivity(intent);
+                        break;
+
 
 
                 }
@@ -332,6 +339,8 @@ public class MainActivity extends AppCompatActivity {
         explainsLayout.removeAllViews();
 //        valueLayout.removeAllViews();
         webLayout.removeAllViews();
+
+        collectDoneImage.setVisibility(View.INVISIBLE);
 
         translateTitle.setText(R.string.translate_title);
 
