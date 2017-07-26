@@ -13,10 +13,11 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/peace"
+            android:layout_height="200dp"
+            android:src="@drawable/translation"
             android:scaleX="0.5"
             android:scaleY="0.5"
+
             />
 
         <TextView
@@ -25,18 +26,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/about_text_chn"
+            android:textAlignment="center"
+            android:textSize="16sp"
             />
 
         <TextView
-            android:layout_marginTop="10dp"
+            android:id="@+id/github_text"
+            android:layout_marginTop="170dp"
+            android:textAlignment="center"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/about_text_eng"
+            android:text="@string/github"
             />
+
+
         <TextView
-            android:layout_marginTop="90dp"
+            android:id="@+id/blog_text"
+            android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"

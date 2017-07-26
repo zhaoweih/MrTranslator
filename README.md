@@ -18,6 +18,7 @@
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/one.jpg)
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/two.jpg)
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/three.jpg)
+![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/four.jpg)
 
 
 
