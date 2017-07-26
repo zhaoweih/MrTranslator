@@ -38,6 +38,14 @@
 
 - 2017.5.15 更新UI界面，还没完成，基础功能可以使用
 
+### 用到的开源库
+
+okhttp(An HTTP+HTTP/2 client for Android and Java applications)
+
+gson(A Java serialization/deserialization library to convert Java Objects into JSON and back)
+
+LitePal(An Android library that makes developers use SQLite database extremely easy)
+
 ### 版权信息
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/icon-monk" title="Icon Monk">Icon Monk</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
