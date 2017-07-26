@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MrTranslator</string>
+    <string name="translate_btn">Translate</string>
+    <string name="clean_text">Clean</string>
+    <string name="translate_title">Translation</string>
+    <string name="explains_title">Explanation</string>
+    <string name="web_title">Phrase</string>
+    <string name="copy_success">Copy successful</string>
+    <string name="share_choice">Please select the app you want to share</string>
+    <string name="input_text">Enter the text you want to translate here...</string>
+    <string name="input_empty">The text entered is empty</string>
+    <string name="translate_fail">Connection timed out</string>
+    <string name="translate_overlong">The text is too long</string>
+    <string name="nav_collect">Translation Favorites</string>
+    <string name="nav_about">About</string>
+    <string name="collect_success">Collect successful</string>
+    <string name="collection">Translation Favorites</string>
+    <string name="deletesuccess">Cancel successful</string>
+    <string name="refresh_success">Refresh successful</string>
+    <string name="cancel_success">Cancel successful</string>
+    <string name="about">About</string>
+    <string name="about_text_chn">MrTranslator\nAuthor：Zhao Weihao</string>
+    <string name="web">Blog\nzhaoweihao.me</string>
+    <string name="github">GitHub Code\nhttps://github.com/zhaoweihaoChina/MrTranslator</string>
+    <string name="githubURL">https://github.com/zhaoweihaoChina/MrTranslator</string>
+    <string name="error">There have been some errors</string>
+    <string name="blogURL">http://zhaoweihao.me</string>
+</resources>
