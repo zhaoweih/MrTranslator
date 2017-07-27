@@ -17,6 +17,10 @@ This APP uses #YouDao Translate API
 #### Features
 Chinese and English translation
 
+### Download
+
+[YingYongBao](http://sj.qq.com/myapp/detail.htm?apkName=com.zhaoweihao.mrtranslator)
+
 
 
 

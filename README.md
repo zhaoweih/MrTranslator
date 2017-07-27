@@ -18,6 +18,10 @@
 #### 功能
 中英互译
 
+### 下载
+
+[应用宝](http://sj.qq.com/myapp/detail.htm?apkName=com.zhaoweihao.mrtranslator)
+
 
 
 
