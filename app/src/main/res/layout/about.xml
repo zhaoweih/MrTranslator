@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/translation"
+            android:src="@drawable/ic_translation"
             android:scaleX="0.5"
             android:scaleY="0.5"
 

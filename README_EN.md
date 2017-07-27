@@ -2,27 +2,26 @@
 # 应用中文名:翻译君
 ## Application name:MrTranslator
 
-##### [README in English](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/README_EN.md)
 
-### 描述
+### Description
 
-#### 图标
+#### Icon
 
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/icon.png)
-#### 原理
+#### Principle
 
-本应用使用#有道翻译API完成
+This APP uses #YouDao Translate API
 
-#有道翻译API申请地址：http://fanyi.youdao.com/openapi
+#Apply for YouDao Translate API：http://fanyi.youdao.com/openapi
 
-#### 功能
-中英互译
-
-
+#### Features
+Chinese and English translation
 
 
 
-### 截图
+
+
+### Screenshots
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/one.jpg)
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/two.jpg)
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/three.jpg)
@@ -30,23 +29,24 @@
 
 
 
-### 如何找我
+### How to find me
 
 
-邮箱：zhaoweihaochn#foxmail.com
+Email：zhaoweihaochn#foxmail.com
 
 
-### 更新信息
+### Update information
 
-- 2017.7.26 收藏功能完善，增加关于页面，完成
-
-
-- 2017.7.06 增加navigationview，增加收藏页面，收藏按钮现在可用，还没完成
+- 2017.7.26 
+Collection function is done, add an about page, finished
 
 
-- 2017.5.15 更新UI界面，还没完成，基础功能可以使用
+- 2017.7.06 add navigationview, add collection page, collection button is now available, still not  completed
 
-### 用到的开源库
+
+- 2017.5.15 Update the UI interface, not yet completed, the basic function can be used
+
+### Open source library that used
 
 okhttp(An HTTP+HTTP/2 client for Android and Java applications)
 
@@ -54,15 +54,15 @@ gson(A Java serialization/deserialization library to convert Java Objects into J
 
 LitePal(An Android library that makes developers use SQLite database extremely easy)
 
-### 版权信息
+### Copyright Information
 
 Material Design icons by [Google](https://github.com/google/material-design-icons)
 
 
 
-### 使用协议
+### Use Agreement
 
-本应用只供学习研究，请勿用于商业用途
+This application is for study only and should not be used for commercial purposes
 
 ### License
 
