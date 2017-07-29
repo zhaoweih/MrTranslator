@@ -1,8 +1,6 @@
 package com.zhaoweihao.mrtranslator.Activity;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -10,10 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.RelativeLayout;
+
 
 import com.zhaoweihao.mrtranslator.R;
+
+import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
 
 /**
  * Created by Zhao Weihao on 2017/7/26.
@@ -23,9 +24,8 @@ public class AboutActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    private TextView githubText;
+    private RelativeLayout relativeLayout;
 
-    private TextView blogText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,38 +34,22 @@ public class AboutActivity extends AppCompatActivity {
         toolbar= (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        githubText= (TextView) findViewById(R.id.github_text);
-        blogText= (TextView) findViewById(R.id.blog_text);
+        relativeLayout= (RelativeLayout) findViewById(R.id.about_page);
 
-        githubText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        View aboutPage = new AboutPage(this)
+                .isRTL(false)
+                .setImage(R.drawable.ic_translation_100)
+                .setDescription(getString(R.string.about_des))
+                .addItem(new Element().setTitle("Version 1.0"))
+                .addGroup(getString(R.string.about_group))
+                .addEmail("zhaoweihaochn@foxmail.com")
+                .addWebsite("http://zhaoweihao.me")
+                .addPlayStore("com.zhaoweihao.mrtranslator")
+                .addGitHub("zhaoweihaoChina")
+                .create();
 
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(getString(R.string.githubURL)));
-                    startActivity(intent);
-                } catch (ActivityNotFoundException ex) {
-                    showError();
-                }
+        relativeLayout.addView(aboutPage);
 
-            }
-        });
-
-        blogText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(getString(R.string.blogURL)));
-                    startActivity(intent);
-                } catch (ActivityNotFoundException ex) {
-                    showError();
-                }
-
-            }
-        });
 
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null){
@@ -75,9 +59,6 @@ public class AboutActivity extends AppCompatActivity {
         }
     }
 
-    private void showError() {
-        Toast.makeText(this, R.string.error, Toast.LENGTH_SHORT).show();
-    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){

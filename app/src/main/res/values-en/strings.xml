@@ -19,10 +19,6 @@
     <string name="refresh_success">Refresh successful</string>
     <string name="cancel_success">Cancel successful</string>
     <string name="about">About</string>
-    <string name="about_text_chn">MrTranslator\nAuthor：Zhao Weihao</string>
-    <string name="web">Blog\nzhaoweihao.me</string>
-    <string name="github">GitHub Code\nhttps://github.com/zhaoweihaoChina/MrTranslator</string>
-    <string name="githubURL">https://github.com/zhaoweihaoChina/MrTranslator</string>
-    <string name="error">There have been some errors</string>
-    <string name="blogURL">http://zhaoweihao.me</string>
+    <string name="about_des">A Simple Chinese to English App</string>
+    <string name="about_group">Contact with us</string>
 </resources>

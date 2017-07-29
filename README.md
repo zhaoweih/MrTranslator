@@ -2,42 +2,26 @@
 # 应用中文名:翻译君
 ## Application name:MrTranslator
 
-##### [README in English](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/README_EN.md)
-
 ### 描述
 
-#### 图标
-
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/icon.png)
 #### 原理
 
-本应用使用#有道翻译API完成
+本应用使用 有道翻译API完成
 
-#有道翻译API申请地址：http://fanyi.youdao.com/openapi
+有道翻译API申请地址：http://fanyi.youdao.com/openapi
 
 #### 功能
 中英互译
 
-### 下载
-
-[应用宝](http://sj.qq.com/myapp/detail.htm?apkName=com.zhaoweihao.mrtranslator)
-
-
-
-
-
 ### 截图
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/one.jpg)
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/two.jpg)
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/three.jpg)
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/four.jpg)
+![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/1.png)
 
 
 
 ### 如何找我
 
 
-邮箱：zhaoweihaochn#foxmail.com
+邮箱：zhaoweihaochn@foxmail.com
 
 
 ### 更新信息
@@ -52,21 +36,12 @@
 
 ### 用到的开源库
 
-okhttp(An HTTP+HTTP/2 client for Android and Java applications)
-
-gson(A Java serialization/deserialization library to convert Java Objects into JSON and back)
-
-LitePal(An Android library that makes developers use SQLite database extremely easy)
-
-### 版权信息
-
-Material Design icons by [Google](https://github.com/google/material-design-icons)
-
-
-
-### 使用协议
-
-本应用只供学习研究，请勿用于商业用途
+name | description
+---- | ---
+okhttp |An HTTP+HTTP/2 client for Android and Java applications
+gson |  A Java serialization/deserialization library to convert Java Objects into JSON and back
+litepal |  An Android library that makes developers use SQLite database extremely easy
+android-about-page |  Create an awesome About Page for your Android App in 2 minutes
 
 ### License
 
