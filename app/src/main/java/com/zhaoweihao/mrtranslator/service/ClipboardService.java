@@ -27,7 +27,7 @@ import okhttp3.Call;
 import okhttp3.Response;
 
 /**
- * Created by lizhaotailang on 2016/7/14.
+ * Created by ZhaoWeihao on 2017/8/15.
  */
 
 public class ClipboardService extends Service {

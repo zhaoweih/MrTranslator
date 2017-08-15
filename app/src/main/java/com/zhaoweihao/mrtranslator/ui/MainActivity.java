@@ -41,6 +41,14 @@ import java.io.IOException;
 import okhttp3.Call;
 import okhttp3.Response;
 
+/**
+ * Created by Zhaoweihao on 17/7/6.
+ * 如果对我的项目有任何疑问可以给我发邮件或者提issues
+ * Email:zhaoweihaochn@gmail.com
+ * 如果觉得我的项目写得好可以给我star和fork
+ * 谢谢！
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;

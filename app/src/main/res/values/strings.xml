@@ -55,4 +55,9 @@
     <string name="OK">确定</string>
     <string name="cancel">取消</string>
     <string name="copy_done">复制成功</string>
+    <string name="add_to_notebook">添加</string>
+    <string name="no_input">输入为空</string>
+
+    <string name="original_text">原文</string>
+    <string name="translated_text">译文</string>
 </resources>

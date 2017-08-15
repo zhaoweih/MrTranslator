@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.zhaoweihao.mrtranslator.litepal.Collect;
 import com.zhaoweihao.mrtranslator.R;
+import com.zhaoweihao.mrtranslator.ui.CollectionActivity;
 
 import org.litepal.crud.DataSupport;
 
@@ -71,6 +72,10 @@ public class CollectionAdapter extends RecyclerView.Adapter<CollectionAdapter.Vi
                 holder.greyCollectDone.setVisibility(View.INVISIBLE);
                 holder.greyCollect.setVisibility(View.VISIBLE);
                 Toast.makeText(context, R.string.cancel_success, Toast.LENGTH_SHORT).show();
+
+                if(context instanceof CollectionActivity){
+                    ((CollectionActivity)context).initViews();
+                }
 
             }
         });
