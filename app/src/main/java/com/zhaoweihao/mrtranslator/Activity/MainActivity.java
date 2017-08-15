@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton button;
 
-//    private TextView dataShown;
-
     private LinearLayout translationLayout;
 
     private TextView phoneticText;
@@ -60,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView queryText;
 
     private LinearLayout webLayout;
-
-//    private LinearLayout valueLayout;
 
     private ProgressBar progressBar;
 
@@ -94,73 +90,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
 
-        toolbar= (Toolbar) findViewById(R.id.toolbar);
-
-        setSupportActionBar(toolbar);
-
-        editText= (EditText)findViewById(R.id.word_input);
-
-        button= (FloatingActionButton)findViewById(R.id.translate_btn);
-
-        button.setVisibility(View.INVISIBLE);
-
-//        dataShown= (TextView)findViewById(R.id.data_shown);
-
-        translationLayout= (LinearLayout) findViewById(R.id.translation_layout);
-
-        phoneticText= (TextView) findViewById(R.id.phonetic_text);
-
-        explainsLayout= (LinearLayout) findViewById(R.id.explains_layout);
-
-        queryText= (TextView) findViewById(R.id.query_text);
-
-        webLayout= (LinearLayout) findViewById(R.id.web_layout);
-
-//        valueLayout= (LinearLayout) findViewById(R.id.value_layout);
-
-        progressBar= (ProgressBar) findViewById(R.id.progress_bar);
-
-        clearView= (ImageView) findViewById(R.id.iv_clear);
-
-        clearView.setVisibility(View.INVISIBLE);
-
-        copyImage= (ImageView) findViewById(R.id.copy);
-
-        copyImage.setVisibility(View.INVISIBLE);
-
-        shareImage= (ImageView) findViewById(R.id.share);
-
-        shareImage.setVisibility(View.INVISIBLE);
-
-        translateTitle= (TextView) findViewById(R.id.translate_title);
-
-        explainsTitle= (TextView) findViewById(R.id.explains_title);
-
-        webTitle= (TextView) findViewById(R.id.web_title);
-
-        mixLayout= (LinearLayout) findViewById(R.id.mixLayout);
-
-        mixLayout.setVisibility(View.INVISIBLE);
-
-        mDrawerLayout= (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        navigationView= (NavigationView) findViewById(R.id.nav_view);
-
-        collectImage= (ImageView) findViewById(R.id.collect);
-
-        collectImage.setVisibility(View.INVISIBLE);
-
-        collectDoneImage= (ImageView) findViewById(R.id.collect_done);
-
-        collectDoneImage.setVisibility(View.INVISIBLE);
-
-        ActionBar actionBar=getSupportActionBar();
-
-        if(actionBar!=null){
-
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
-        }
+        initViews();
 
         navigationView.setCheckedItem(R.id.nav_collect);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -262,8 +192,6 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(Call call, Response response) throws IOException {
                             String responseData = response.body().string();
                             final Translate translate = Utility.handleTranslateResponse(responseData);
-//                        showResponseData(responseData);
-//                        parseJSONWithGSON(responseData);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -303,41 +231,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    //    private void showResponseData(final String response){
-//        runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//            }
-//        });
-//    }
-//
-//    private void parseJSONWithGSON(String jsonData){
-//        Gson gson=new Gson();
-//        Translate translate=gson.fromJson(jsonData,Translate.class);
-//        for (int i = 0;i<translate.getTranslation().length;i++)
-//        {
-//            Log.d("MainActivity",translate.getTranslation()[i]);
-//        }
-//        Log.d("MainActivity",translate.getBasic().getPhonetic());
-//        for (int i = 0;i<translate.getBasic().getExplains().length;i++){
-//            Log.d("MainActivity",translate.getBasic().getExplains()[i]);
-//        }
-//        Log.d("MainActivity",translate.getQuery());
-//        Log.d("MainActivity",String.valueOf(translate.getErrorCode()));
-//        for (int i = 0;i<translate.getWeb().size();i++){
-//            for(int j = 0; j<translate.getWeb().get(i).getValue().length;j++)
-//            {
-//                Log.d("MainActivity",translate.getWeb().get(i).getValue()[j]);
-//            }
-//            Log.d("MainActivity",translate.getWeb().get(i).getKey());
-//        }
-//    }
 
     private void showTranslateInfo(final Translate translate){
         translationLayout.removeAllViews();
         explainsLayout.removeAllViews();
-//        valueLayout.removeAllViews();
         webLayout.removeAllViews();
 
         collectDoneImage.setVisibility(View.INVISIBLE);
@@ -442,8 +339,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         copyImage.setVisibility(View.VISIBLE);
 
         shareImage.setVisibility(View.VISIBLE);
@@ -451,10 +346,6 @@ public class MainActivity extends AppCompatActivity {
         mixLayout.setVisibility(View.VISIBLE);
 
         collectImage.setVisibility(View.VISIBLE);
-
-
-
-
 
     }
 
@@ -468,6 +359,74 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return finalValue;
+    }
+
+    private void initViews(){
+
+        toolbar= (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
+        editText= (EditText)findViewById(R.id.word_input);
+
+        button= (FloatingActionButton)findViewById(R.id.translate_btn);
+
+        button.setVisibility(View.INVISIBLE);
+
+        translationLayout= (LinearLayout) findViewById(R.id.translation_layout);
+
+        phoneticText= (TextView) findViewById(R.id.phonetic_text);
+
+        explainsLayout= (LinearLayout) findViewById(R.id.explains_layout);
+
+        queryText= (TextView) findViewById(R.id.query_text);
+
+        webLayout= (LinearLayout) findViewById(R.id.web_layout);
+
+        progressBar= (ProgressBar) findViewById(R.id.progress_bar);
+
+        clearView= (ImageView) findViewById(R.id.iv_clear);
+
+        clearView.setVisibility(View.INVISIBLE);
+
+        copyImage= (ImageView) findViewById(R.id.copy);
+
+        copyImage.setVisibility(View.INVISIBLE);
+
+        shareImage= (ImageView) findViewById(R.id.share);
+
+        shareImage.setVisibility(View.INVISIBLE);
+
+        translateTitle= (TextView) findViewById(R.id.translate_title);
+
+        explainsTitle= (TextView) findViewById(R.id.explains_title);
+
+        webTitle= (TextView) findViewById(R.id.web_title);
+
+        mixLayout= (LinearLayout) findViewById(R.id.mixLayout);
+
+        mixLayout.setVisibility(View.INVISIBLE);
+
+        mDrawerLayout= (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        navigationView= (NavigationView) findViewById(R.id.nav_view);
+
+        collectImage= (ImageView) findViewById(R.id.collect);
+
+        collectImage.setVisibility(View.INVISIBLE);
+
+        collectDoneImage= (ImageView) findViewById(R.id.collect_done);
+
+        collectDoneImage.setVisibility(View.INVISIBLE);
+
+        ActionBar actionBar=getSupportActionBar();
+
+        if(actionBar!=null){
+
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
+        }
+
     }
 
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="collection"
+        android:enabled="true"
+        android:icon="@drawable/ic_book_round"
+        android:shortcutShortLabel="@string/shortcuts_checkcollection"
+        android:shortcutLongLabel="@string/shortcuts_checkcollection">
+        <intent
+            android:action="com.zhaoweihao.mrtranslator.collection"
+            android:targetPackage="com.zhaoweihao.mrtranslator"
+            android:targetClass="com.zhaoweihao.mrtranslator.Activity.CollectionActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+
+</shortcuts>
