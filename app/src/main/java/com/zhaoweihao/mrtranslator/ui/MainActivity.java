@@ -1,4 +1,4 @@
-package com.zhaoweihao.mrtranslator.Activity;
+package com.zhaoweihao.mrtranslator.ui;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -27,10 +27,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zhaoweihao.mrtranslator.Data.Collect;
+import com.zhaoweihao.mrtranslator.litepal.Collect;
 import com.zhaoweihao.mrtranslator.R;
-import com.zhaoweihao.mrtranslator.Util.HttpUtil;
-import com.zhaoweihao.mrtranslator.Util.Utility;
+import com.zhaoweihao.mrtranslator.utils.HttpUtil;
+import com.zhaoweihao.mrtranslator.utils.Utility;
 import com.zhaoweihao.mrtranslator.constant.Constant;
 import com.zhaoweihao.mrtranslator.gson.Translate;
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.nav_about:
-                        intent=new Intent(MainActivity.this,AboutActivity.class);
+                        intent=new Intent(MainActivity.this,SettingsPreferenceActivity.class);
                         startActivity(intent);
                         break;
 

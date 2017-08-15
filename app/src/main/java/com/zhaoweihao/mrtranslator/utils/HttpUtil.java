@@ -1,4 +1,4 @@
-package com.zhaoweihao.mrtranslator.Util;
+package com.zhaoweihao.mrtranslator.utils;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

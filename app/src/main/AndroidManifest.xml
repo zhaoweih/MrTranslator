@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".Activity.MainActivity"
+        <activity android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
             >
             <intent-filter>
@@ -23,12 +23,25 @@
             <meta-data android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-        <activity android:name=".Activity.CollectionActivity"
+        <activity android:name=".ui.CollectionActivity"
             android:label="@string/collection"
             />
-        <activity android:name=".Activity.AboutActivity"
-            android:label="@string/about"
+        <activity android:name=".ui.SettingsPreferenceActivity"
+            android:label="@string/setting"
             />
+
+        <service android:name=".service.ClipboardService">
+            <intent-filter>
+                <action android:name="com.zhaoweihao.mrtranslator.ClipboardService"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".receiver.StartClipboardServiceAtBootReceiver"
+            android:label="StartClipboardServiceAtBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

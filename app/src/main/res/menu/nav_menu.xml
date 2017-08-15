@@ -10,7 +10,7 @@
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_more_horiz_white_24dp"
-            android:title="@string/nav_about"/>
+            android:title="@string/nav_setting"/>
 
     </group>
 

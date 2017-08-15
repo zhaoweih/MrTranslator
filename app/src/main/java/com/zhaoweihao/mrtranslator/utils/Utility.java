@@ -1,4 +1,4 @@
-package com.zhaoweihao.mrtranslator.Util;
+package com.zhaoweihao.mrtranslator.utils;
 
 import com.google.gson.Gson;
 import com.zhaoweihao.mrtranslator.gson.Translate;

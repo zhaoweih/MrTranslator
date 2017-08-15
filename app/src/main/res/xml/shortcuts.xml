@@ -10,7 +10,7 @@
         <intent
             android:action="com.zhaoweihao.mrtranslator.collection"
             android:targetPackage="com.zhaoweihao.mrtranslator"
-            android:targetClass="com.zhaoweihao.mrtranslator.Activity.CollectionActivity" />
+            android:targetClass="com.zhaoweihao.mrtranslator.ui.CollectionActivity" />
         <!-- If your shortcut is associated with multiple intents, include them
              here. The last intent in the list determines what the user sees when
              they launch this shortcut. -->

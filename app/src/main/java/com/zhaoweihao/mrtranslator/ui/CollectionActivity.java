@@ -1,4 +1,4 @@
-package com.zhaoweihao.mrtranslator.Activity;
+package com.zhaoweihao.mrtranslator.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,9 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.zhaoweihao.mrtranslator.Adapter.CollectionAdapter;
-import com.zhaoweihao.mrtranslator.Data.Collect;
-import com.zhaoweihao.mrtranslator.Other.MyItemDecoration;
+import com.zhaoweihao.mrtranslator.adapters.CollectionAdapter;
+import com.zhaoweihao.mrtranslator.litepal.Collect;
+import com.zhaoweihao.mrtranslator.view.MyItemDecoration;
 import com.zhaoweihao.mrtranslator.R;
 
 import org.litepal.crud.DataSupport;

@@ -1,4 +1,4 @@
-package com.zhaoweihao.mrtranslator.Other;
+package com.zhaoweihao.mrtranslator.view;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

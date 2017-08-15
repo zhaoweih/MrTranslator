@@ -1,4 +1,4 @@
-package com.zhaoweihao.mrtranslator.Adapter;
+package com.zhaoweihao.mrtranslator.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,8 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zhaoweihao.mrtranslator.Activity.CollectionActivity;
-import com.zhaoweihao.mrtranslator.Data.Collect;
+import com.zhaoweihao.mrtranslator.litepal.Collect;
 import com.zhaoweihao.mrtranslator.R;
 
 import org.litepal.crud.DataSupport;

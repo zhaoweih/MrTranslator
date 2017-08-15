@@ -1,4 +1,4 @@
-package com.zhaoweihao.mrtranslator.Data;
+package com.zhaoweihao.mrtranslator.litepal;
 
 import org.litepal.crud.DataSupport;
 
