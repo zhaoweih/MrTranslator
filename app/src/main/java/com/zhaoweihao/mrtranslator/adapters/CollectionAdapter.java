@@ -74,6 +74,7 @@ public class CollectionAdapter extends RecyclerView.Adapter<CollectionAdapter.Vi
                 Toast.makeText(context, R.string.cancel_success, Toast.LENGTH_SHORT).show();
 
                 if(context instanceof CollectionActivity){
+                    //调用activity的方法initViews()更新数据
                     ((CollectionActivity)context).initViews();
                 }
 

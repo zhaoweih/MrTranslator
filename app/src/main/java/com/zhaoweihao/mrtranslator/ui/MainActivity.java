@@ -52,45 +52,25 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-
     private EditText editText;
-
     private FloatingActionButton button;
-
     private LinearLayout translationLayout;
-
     private TextView phoneticText;
-
     private LinearLayout explainsLayout;
-
     private TextView queryText;
-
     private LinearLayout webLayout;
-
     private ProgressBar progressBar;
-
     private ImageView clearView;
-
     private ImageView copyImage;
-
     private ImageView shareImage;
-
     private TextView translateTitle;
-
     private TextView explainsTitle;
-
     private TextView webTitle;
-
     private LinearLayout mixLayout;
-
     private DrawerLayout mDrawerLayout;
-
     private NavigationView navigationView;
-
     private ImageView collectImage;
-
     private ImageView collectDoneImage;
-
     private Intent intent;
 
     @Override
@@ -100,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
 
+        //navigationView点击事件
         navigationView.setCheckedItem(R.id.nav_collect);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -113,32 +94,25 @@ public class MainActivity extends AppCompatActivity {
                         intent=new Intent(MainActivity.this,SettingsPreferenceActivity.class);
                         startActivity(intent);
                         break;
-
-
-
                 }
                 mDrawerLayout.closeDrawers();
                 return true;
             }
         });
 
-
-
-
+        //删除按钮点击事件
         clearView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editText.setText("");
             }
         });
-
+        //editText输入监控事件，如果有文字输入显示删除按钮和翻译按钮，如果为空则隐藏按钮
         editText.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
@@ -149,61 +123,56 @@ public class MainActivity extends AppCompatActivity {
                     clearView.setVisibility(View.INVISIBLE);
                     button.setVisibility(View.INVISIBLE);
                 }
-
-
             }
-
             @Override
             public void afterTextChanged(Editable s) {
-
             }
         });
-
-
+        //翻译按钮监控事件
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //如果编辑框输入文字为空则snackbar提示输入文本为空
                 if(editText.getText().toString().isEmpty()){
                     Snackbar.make(button,R.string.input_empty,Snackbar.LENGTH_SHORT)
                             .show();
                 }else {
-
+                    //显示progressbar
                     progressBar.setVisibility(View.VISIBLE);
-
+                    //收起输入法
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     if (imm.isActive()) {
-                        imm.hideSoftInputFromWindow(button.getWindowToken(), 0);
-                    }
-
-
+                        imm.hideSoftInputFromWindow(button.getWindowToken(), 0);}
+                    //获取输入框的文字内容
                     String word = editText.getText().toString();
-
+                    //获取有道api初始url
                     String url = Constant.YOUDAO_URL;
-
+                    //okhttp发送网络请求,url+word是初始url拼接word组成api
                     HttpUtil.sendOkHttpRequest(url + word, new okhttp3.Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {
-
+                            //网络请求失败，开启子进程，更新页面
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     progressBar.setVisibility(View.GONE);
                                     Toast.makeText(MainActivity.this, R.string.translate_fail, Toast.LENGTH_SHORT).show();
-
                                 }
                             });
-
                         }
-
                         @Override
                         public void onResponse(Call call, Response response) throws IOException {
+                            //网络请求成功，获取json数据
                             String responseData = response.body().string();
+                            //利用gson处理json数据，转化为对象
                             final Translate translate = Utility.handleTranslateResponse(responseData);
+                            //开启子进程更新界面
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
+                                    //json数据中errorcode为0表示获取数据成功,20代表文本过长,其他就是出现错误，具体可查有道api使用事项
                                     if (translate.getErrorCode() == 0) {
+                                        //将数据显示在界面上
                                         showTranslateInfo(translate);
                                     } else if (translate.getErrorCode() == 20) {
                                         progressBar.setVisibility(View.GONE);
@@ -214,16 +183,11 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-
-
                         }
                     });
                 }
-
-
             }
         });
-
     }
 
     @Override
@@ -232,27 +196,24 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 break;
-
             default:
-
         }
         return true;
     }
 
 
     private void showTranslateInfo(final Translate translate){
+        //先清空layout里面的东西
         translationLayout.removeAllViews();
         explainsLayout.removeAllViews();
         webLayout.removeAllViews();
-
+        //收藏成功按钮隐藏
         collectDoneImage.setVisibility(View.INVISIBLE);
-
+        //设置title
         translateTitle.setText(R.string.translate_title);
-
         explainsTitle.setText(R.string.explains_title);
-
         webTitle.setText(R.string.web_title);
-
+        //将请求回来的数据显示在textview上
         for (int i = 0;i<translate.getTranslation().length;i++)
         {
             View view= LayoutInflater.from(this).inflate(R.layout.translation_item,translationLayout,false);
@@ -294,26 +255,22 @@ public class MainActivity extends AppCompatActivity {
             valueText.setText(values);
             webLayout.addView(view);
             webLayout.setVisibility(View.VISIBLE);
-
         }
-
-
         }
-
+        //显示好后隐藏progressbar
         progressBar.setVisibility(View.GONE);
-
+        //复制按钮监听事件
         copyImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ClipboardManager manager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
                 ClipData clipData = ClipData.newPlainText("text", translate.getTranslation()[0]);
                 manager.setPrimaryClip(clipData);
-
                 Snackbar.make(button,R.string.copy_success,Snackbar.LENGTH_SHORT)
                         .show();
             }
         });
-
+        //分享按钮监听事件
         shareImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -323,23 +280,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent,getString(R.string.share_choice)));
             }
         });
-
+        //收藏按钮监听事件
         collectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //利用litepal将数据存入数据库
                 Collect collect=new Collect();
                 collect.setChinese(translate.getTranslation()[0]);
                 collect.setEnglish(translate.getQuery());
                 collect.save();
                 Toast.makeText(MainActivity.this, R.string.collect_success, Toast.LENGTH_SHORT).show();
+                //显示收藏成功按钮，隐藏收藏按钮
                 collectDoneImage.setVisibility(View.VISIBLE);
                 collectImage.setVisibility(View.INVISIBLE);
             }
         });
-
+        //收藏成功按钮监听事件
         collectDoneImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //从数据库删除该数据
                 DataSupport.deleteAll(Collect.class,"english=?",translate.getQuery());
                 Toast.makeText(MainActivity.this, R.string.deletesuccess, Toast.LENGTH_SHORT).show();
                 collectDoneImage.setVisibility(View.INVISIBLE);
@@ -348,13 +308,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         copyImage.setVisibility(View.VISIBLE);
-
         shareImage.setVisibility(View.VISIBLE);
-
         mixLayout.setVisibility(View.VISIBLE);
-
         collectImage.setVisibility(View.VISIBLE);
-
     }
 
     private  String getFinalValue(String[] value) {
@@ -368,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return finalValue;
     }
-
+    //获取控件实例
     private void initViews(){
 
         toolbar= (Toolbar) findViewById(R.id.toolbar);

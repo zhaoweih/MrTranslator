@@ -9,6 +9,7 @@ import com.zhaoweihao.mrtranslator.R;
 
 /**
  * Created by Zhao Weihao on 2017/8/15.
+ * 设置页面
  */
 
 public class SettingsPreferenceActivity extends AppCompatActivity {
@@ -17,7 +18,7 @@ public class SettingsPreferenceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
+        //加载fragment
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.container_main, new SettingsPreferenceFragment())
                 .commit();

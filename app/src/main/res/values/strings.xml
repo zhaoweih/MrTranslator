@@ -28,7 +28,7 @@
     <string name="github_source_description">https://github.com/zhaoweihaoChina/MrTranslator</string>
     <string name="enter_key">按回车键结束输入</string>
     <string name="show_samples">显示例句</string>
-    <string name="topic">简单翻译使用反馈</string>
+    <string name="topic">翻译君使用反馈</string>
     <string name="sdk_version">SDK版本:</string>
     <string name="choose_mail">选择邮件类应用</string>
     <string name="sendto">mailto:zhaoweihaochn@foxmail.com</string>
