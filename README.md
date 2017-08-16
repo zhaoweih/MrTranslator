@@ -12,14 +12,20 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 ![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/02.png)
 
+## 下载 Download
+
+[Google Drive](https://drive.google.com/open?id=0B71gRUTypK2UZXhSNVZ3RXNQVnM)
+
+[Fir.im](https://fir.im/1gwl)
+
 ## 相关项目Open Source Project
 
-| Project                   | Introduction                             |
-| ------------------------- | ---------------------------------------- |
-| okhttp                    | An HTTP+HTTP/2 client for Android and Java applications |
-| gson                      | A Java serialization/deserialization library to convert Java Objects into JSON and back |
-| litepal                   | An Android library that makes developers use SQLite database extremely easy |
-| Android Support Libraries | The Android Support Library offers a number of features that are not built into the framework. These libraries offer backward-compatible versions of new features, provide useful UI elements that are not included in the framework, and provide a range of utilities that apps can draw on. |
+| Project                                  | Introduction                             |
+| ---------------------------------------- | ---------------------------------------- |
+| [okhttp](https://github.com/square/okhttp) | An HTTP+HTTP/2 client for Android and Java applications |
+| [gson](https://github.com/google/gson)   | A Java serialization/deserialization library to convert Java Objects into JSON and back |
+| [litepal](https://github.com/LitePalFramework/LitePal) | An Android library that makes developers use SQLite database extremely easy |
+| [Android Support Libraries](https://developer.android.com/topic/libraries/support-library/index.html) | The Android Support Library offers a number of features that are not built into the framework. These libraries offer backward-compatible versions of new features, provide useful UI elements that are not included in the framework, and provide a range of utilities that apps can draw on. |
 
 ## 需要做的事 TO-DO LIST
 

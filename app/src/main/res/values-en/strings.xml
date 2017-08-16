@@ -7,18 +7,57 @@
     <string name="web_title">Phrase</string>
     <string name="copy_success">Copy successful</string>
     <string name="share_choice">Please select the app you want to share</string>
-    <string name="input_text">Enter the text you want to translate here...</string>
+    <string name="input_text">Enter the text you want to translate here…</string>
     <string name="input_empty">The text entered is empty</string>
     <string name="translate_fail">Connection timed out</string>
     <string name="translate_overlong">The text is too long</string>
     <string name="nav_collect">Translation Favorites</string>
-    <string name="nav_about">About</string>
+    <string name="nav_setting">Setting</string>
     <string name="collect_success">Collect successful</string>
     <string name="collection">Translation Favorites</string>
     <string name="deletesuccess">Cancel successful</string>
     <string name="refresh_success">Refresh successful</string>
     <string name="cancel_success">Cancel successful</string>
+
+
+    <string name="shortcuts_checkcollection">Check the collection</string>
+    <string name="setting">Setting</string>
+
+    <string name="basic_settings">Basic Settings</string>
+    <string name="start_tap_translate">Start tap translate</string>
+    <string name="start_tap_translate_script">Start tap translate script</string>
+    <string name="github_source">GitHub Source</string>
+    <string name="github_source_description">https://github.com/zhaoweihaoChina/MrTranslator</string>
+    <string name="enter_key">Enter to translate</string>
+    <string name="show_samples">Show Samples</string>
+    <string name="topic">Topic</string>
+    <string name="sdk_version">SDK version:</string>
+    <string name="choose_mail">Choose mail</string>
+    <string name="sendto">mailto:zhaoweihaochn@foxmail.com</string>
+    <string name="donate">Donate</string>
+    <string name="donate_content">Alipay account will be copy，you can go to alipay and donate me，Thanks！</string>
+    <string name="donate_title">Thanks for your donation</string>
+    <string name="donate_account">1028410337@qq.com</string>
+    <string name="no_mail_app">No mail app</string>
+    <string name="no_app_store">No app store found</string>
+    <string name="rate">Rate</string>
     <string name="about">About</string>
-    <string name="about_des">A Simple Chinese to English App</string>
-    <string name="about_group">Contact with us</string>
+    <string name="version">Version:1.0</string>
+    <string name="rate_description">if you like MrTranslator,please give her a rate</string>
+    <string name="support">Support</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_description">Help me to improve MrTranslator</string>
+    <string name="coffee">Coffee</string>
+    <string name="coffee_description">If you agree with my job ,you can offer me a cup of coffee</string>
+    <string name="share">Share</string>
+
+    <string name="error">Error</string>
+    <string name="OK">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="copy_done">Copy done</string>
+    <string name="add_to_notebook">Add to collection</string>
+    <string name="no_input">Empty input</string>
+
+    <string name="original_text">Original text</string>
+    <string name="translated_text">Translated text</string>
 </resources>
