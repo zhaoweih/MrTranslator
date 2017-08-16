@@ -2,6 +2,14 @@
 # 应用中文名:翻译君
 ## Application name:MrTranslator
 
+
+
+```
+[![Build Status](https://travis-ci.org/michaelliao/openweixin.svg?branch=master)](https://travis-ci.org/michaelliao/openweixin)
+```
+
+
+
 ### 描述
 
 #### 原理
@@ -27,12 +35,12 @@
 
 ### 用到的开源库
 
-name | description
----- | ---
-okhttp |An HTTP+HTTP/2 client for Android and Java applications
-gson |  A Java serialization/deserialization library to convert Java Objects into JSON and back
-litepal |  An Android library that makes developers use SQLite database extremely easy
-android-about-page |  Create an awesome About Page for your Android App in 2 minutes
+| name               | description                              |
+| ------------------ | ---------------------------------------- |
+| okhttp             | An HTTP+HTTP/2 client for Android and Java applications |
+| gson               | A Java serialization/deserialization library to convert Java Objects into JSON and back |
+| litepal            | An Android library that makes developers use SQLite database extremely easy |
+| android-about-page | Create an awesome About Page for your Android App in 2 minutes |
 
 ### License
 
