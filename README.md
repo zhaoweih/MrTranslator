@@ -8,7 +8,9 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 ## 截图 Screenshot
 
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/1.png)
+![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/01.png)
+
+![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/02.png)
 
 ## 相关项目Open Source Project
 
