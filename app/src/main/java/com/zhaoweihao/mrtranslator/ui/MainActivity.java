@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 if (editText.getEditableText().toString().length() != 0){
                     clearView.setVisibility(View.VISIBLE);
                     button.setVisibility(View.VISIBLE);
-                } else {
+                }else {
                     clearView.setVisibility(View.INVISIBLE);
                     button.setVisibility(View.INVISIBLE);
                 }
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                 if(editText.getText().toString().isEmpty()){
                     Snackbar.make(button,R.string.input_empty,Snackbar.LENGTH_SHORT)
                             .show();
-                }else {
+                } else {
                     //显示progressbar
                     progressBar.setVisibility(View.VISIBLE);
                     //收起输入法
@@ -148,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                     //获取有道api初始url
                     String url = Constant.YOUDAO_URL;
                     //okhttp发送网络请求,url+word是初始url拼接word组成api
+
                     HttpUtil.sendOkHttpRequest(url + word, new okhttp3.Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {
@@ -165,24 +166,30 @@ public class MainActivity extends AppCompatActivity {
                             //网络请求成功，获取json数据
                             String responseData = response.body().string();
                             //利用gson处理json数据，转化为对象
-                            final Translate translate = Utility.handleTranslateResponse(responseData);
-                            //开启子进程更新界面
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    //json数据中errorcode为0表示获取数据成功,20代表文本过长,其他就是出现错误，具体可查有道api使用事项
-                                    if (translate.getErrorCode() == 0) {
-                                        //将数据显示在界面上
-                                        showTranslateInfo(translate);
-                                    } else if (translate.getErrorCode() == 20) {
-                                        progressBar.setVisibility(View.GONE);
-                                        Toast.makeText(MainActivity.this, R.string.translate_overlong, Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        progressBar.setVisibility(View.GONE);
-                                        Toast.makeText(MainActivity.this, R.string.translate_fail, Toast.LENGTH_SHORT).show();
+                            try{
+                                final Translate translate = Utility.handleTranslateResponse(responseData);
+                                //开启子进程更新界面
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        //json数据中errorcode为0表示获取数据成功,20代表文本过长,其他就是出现错误，具体可查有道api使用事项
+                                        if (translate.getErrorCode() == 0) {
+                                            //将数据显示在界面上
+                                            showTranslateInfo(translate);
+                                        } else if (translate.getErrorCode() == 20) {
+                                            progressBar.setVisibility(View.GONE);
+                                            Toast.makeText(MainActivity.this, R.string.translate_overlong, Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            progressBar.setVisibility(View.GONE);
+                                            Toast.makeText(MainActivity.this, R.string.translate_fail, Toast.LENGTH_SHORT).show();
+                                        }
                                     }
-                                }
-                            });
+                                });
+                            }catch (Exception e){
+                                e.printStackTrace();
+                                progressBar.setVisibility(View.INVISIBLE);
+                            }
+
                         }
                     });
                 }
