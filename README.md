@@ -42,7 +42,11 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 ## 联系我 Contact me 
 
-zhaoweihaochn#gmail.com
+由于最近封锁严重，请先联系我foxmail邮箱
+
+zhaoweihaochn#foxmail.com
+
+(Available for job opportunity)
 
 [blog](http://zhaoweihao.me)
 
