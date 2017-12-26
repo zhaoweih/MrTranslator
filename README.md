@@ -8,9 +8,9 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 ## 截图 Screenshot
 
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/01.png)
-
-![](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/screenshots/02.png)
+|         MainPage(Chinese)         |           MainPage(English)           |
+| :-------------------------------: | :-----------------------------------: |
+| ![MainPage](./screenshots/01.jpg) | ![CommentsPage](./screenshots/02.jpg) |
 
 ## 下载 Download
 
@@ -27,25 +27,17 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 | [litepal](https://github.com/LitePalFramework/LitePal) | An Android library that makes developers use SQLite database extremely easy |
 | [Android Support Libraries](https://developer.android.com/topic/libraries/support-library/index.html) | The Android Support Library offers a number of features that are not built into the framework. These libraries offer backward-compatible versions of new features, provide useful UI elements that are not included in the framework, and provide a range of utilities that apps can draw on. |
 
-## 需要做的事 TO-DO LIST
-
-- ~~翻译功能 Translation function~~
-
-
-- ~~翻译收藏夹 Translation Favorites~~
-- ~~点按翻译 Tap on translate~~
-- ~~增加shortcuts shortcuts~~
-- 回车翻译 Enter to translate
-- 搜索翻译收藏夹功能 Search Translation Favorites
-
 
 
 ## 联系我 Contact me 
 
-zhaoweihaochn#foxmail.com
+:mailbox:zhaoweihaochn#gmail.com
 
-[blog](http://zhaoweihao.me)
+## 请我喝咖啡 Offer me a cup of coffee
 
-## 许可证 License 
+:heart:[Alipay支付宝](http://op4e089f0.bkt.clouddn.com/1512475882201.jpg)
+:heart:[Paypal](https://www.paypal.me/zhaoweihao)
 
-[License](https://github.com/zhaoweihaoChina/MrTranslator/blob/master/LICENSE)
+## 许可证 License
+
+MrTranslator is under an Apache License 2.0. See the [LICENSE](LICENSE) for more information.
