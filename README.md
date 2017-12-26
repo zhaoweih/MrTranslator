@@ -10,7 +10,7 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 |         MainPage(Chinese)         |           MainPage(English)           |
 | :-------------------------------: | :-----------------------------------: |
-| ![MainPage](./screenshots/01.jpg) | ![CommentsPage](./screenshots/02.jpg) |
+| ![MainPage_cn](./screenshots/01.jpg) | ![MainPage_en](./screenshots/02.jpg) |
 
 ## 下载 Download
 
