@@ -31,7 +31,7 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 ## 联系我 Contact me 
 
-:mailbox:zhaoweihaochn#gmail.com
+:mailbox:zhaoweihao.dev#gmail.com
 
 ## 请我喝咖啡 Offer me a cup of coffee
 
