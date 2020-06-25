@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: org.litepal.android:core:1.5.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f52215204c89a302e5786c37ea48cbf1/core-1.5.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f52215204c89a302e5786c37ea48cbf1/core-1.5.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f52215204c89a302e5786c37ea48cbf1/core-1.5.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eb74f8d31baf29fc9c56cf827aa7854d/core-1.5.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eb74f8d31baf29fc9c56cf827aa7854d/core-1.5.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eb74f8d31baf29fc9c56cf827aa7854d/core-1.5.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.litepal.android/core/1.5.1/22dff4f8c98800811c03b65ae55f3386b7528ac4/core-1.5.1-javadoc.jar!/" />
