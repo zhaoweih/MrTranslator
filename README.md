@@ -16,8 +16,6 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 [Google Drive](https://drive.google.com/open?id=0B71gRUTypK2UZXhSNVZ3RXNQVnM)
 
-[Fir.im](https://fir.im/1gwl)
-
 ## 相关项目Open Source Project
 
 | Project                                  | Introduction                             |
@@ -31,12 +29,11 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 ## 联系我 Contact me 
 
-:mailbox:zhaoweihao.dev#gmail.com
+:mailbox:zhaoweihao.dev@gmail.com
 
 ## 请我喝咖啡 Offer me a cup of coffee
 
-:heart:[Alipay支付宝](http://op4e089f0.bkt.clouddn.com/1512475882201.jpg)
-:heart:[Paypal](https://www.paypal.me/zhaoweihao)
+https://zhaoweihao.dev/pay/
 
 ## 许可证 License
 
