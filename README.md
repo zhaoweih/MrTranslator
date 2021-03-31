@@ -31,10 +31,6 @@ MrTranslator is an Android translation  APP, the API comes from **youdao transla
 
 :mailbox:zhaoweihao.dev@gmail.com
 
-## 请我喝咖啡 Offer me a cup of coffee
-
-https://zhaoweihao.dev/pay/
-
 ## 许可证 License
 
 MrTranslator is under an Apache License 2.0. See the [LICENSE](LICENSE) for more information.
